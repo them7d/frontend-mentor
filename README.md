@@ -1,2 +1,2 @@
-# qr-card.github.io
+# qr-card
 # this repo is challenge make qr card component
