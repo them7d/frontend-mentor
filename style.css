@@ -85,12 +85,6 @@ body {
     background: hsl(157deg 37% 24%);
 }
 
-.attribution {
-    flex: 0 0 100%;
-    position: absolute;
-    bottom: 10px;
-}
-
 @media screen and (max-width: 650px) {
     .card {
         flex-direction: column;
