@@ -60,6 +60,8 @@ body {
 .card .price {
     font-size: 40px;
     font-family: 'Fraunces', serif;
+    color: hsl(158, 36%, 37%);
+    ;
 }
 
 .card .stroke {
