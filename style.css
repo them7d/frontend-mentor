@@ -18,8 +18,8 @@ body {
     width: 100%;
     margin: 0 auto;
     background: hsl(215.29, 23.94%, 13.92%);
-    border-radius: 10px;
-    padding: 20px;
+    border-radius: 20px;
+    padding: 30px;
 }
 
 .fa-star {
