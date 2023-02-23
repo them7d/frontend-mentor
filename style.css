@@ -1,0 +1,117 @@
+@import url(https://fonts.google.com/specimen/Overpass);
+.hidden {
+    display: none!important;
+}
+
+body {
+    background: hsl(216, 12%, 8%);
+    color: hsl(0, 0%, 100%);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-family: "Overpass";
+}
+
+.card {
+    max-width: 360px;
+    width: 100%;
+    margin: 0 auto;
+    background: hsl(215.29, 23.94%, 13.92%);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.fa-star {
+    color: hsl(25, 97%, 53%);
+    padding: 10px;
+}
+
+.describe {
+    color: hsl(217, 12%, 63%);
+    font-size: 15px;
+    line-height: 1.5em;
+}
+
+.stars-con {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.stars-con span {
+    color: hsl(217, 12%, 63%);
+    padding: 10px 17px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.stars-con span,
+.fa-star {
+    background: hsl(210, 19.15%, 18.43%);
+    border-radius: 50%;
+}
+
+.stars-con span.active {
+    color: #fff;
+    background: hsl(217, 12%, 63%);
+}
+
+.stars-con span:hover {
+    background: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+}
+
+.btn.submit {
+    background: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+    outline-color: transparent!important;
+    border: transparent;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-transform: Uppercase;
+    font-weight: 700;
+}
+
+.btn.submit:hover {
+    background: hsl(0, 0%, 100%);
+    color: hsl(25, 97%, 53%);
+}
+
+.thank {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.raing-result {
+    background: hsl(210, 19.15%, 18.43%);
+    color: hsl(25, 97%, 53%);
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+
+.img-thank,
+.raing-result {
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.thank .describe {
+    text-align: center;
+    font-size: 14px;
+    padding: 0 15px;
+}
+
+.thank h2 {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        width: calc(85% - 20px);
+    }
+}
