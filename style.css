@@ -1,0 +1,146 @@
+@import url(https://fonts.google.com/specimen/Inter);
+body {
+    margin: 0;
+    background: hsl(233, 47%, 7%);
+    color: var(--color);
+    height: 100vh;
+}
+
+.card {
+    display: flex;
+    width: 70%;
+    max-width: 1000px;
+    min-height: 400px;
+    margin: 0 auto;
+    position: relative;
+    top: calc(50% - 450px/2);
+    background: hsl(244, 38%, 16%);
+    border-radius: 10px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+}
+
+.features>div {
+    text-transform: uppercase;
+    color: gray;
+    font-size: 13px;
+}
+
+.features>div>h2 {
+    font-weight: 700;
+    text-align: center;
+    font-size: 30px;
+    color: var(--color);
+    margin: 0;
+}
+
+.text-container {
+    padding: 40px;
+    font-family: Inter;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.img-con {
+    position: relative;
+    background: url("./images/image-header-desktop.jpg");
+    min-height: 10em;
+    width: 540px;
+    min-width: 50%;
+    background: url(images/image-header-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0 10px 10px 0;
+    overflow: hidden;
+}
+
+.img-con::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: hsl(277deg 68.19% 24.7% / 70%);
+    filter: brightness(0.8);
+}
+
+.text-container>p {
+    color: lightgray;
+    margin: auto 0;
+}
+
+.text-container>h1 {
+    margin: 20px 0 35px;
+}
+
+.img-con>img {
+    width: 100%;
+}
+
+:root {
+    --color: white;
+}
+
+
+/* tablet */
+
+@media only screen and (max-width: 1025px) {
+    .text-container {
+        padding: 20px;
+    }
+    .card {
+        width: 85%;
+        min-height: 350px;
+    }
+    .text-container>h1 {
+        font-size: 25px;
+        margin: 0;
+    }
+    .features>div>h2 {
+        font-size: 25px;
+    }
+}
+
+
+/* mobile */
+
+@media only screen and (max-width:430px) {
+    .card {
+        flex-direction: column-reverse;
+        border-radius: 10px;
+        min-height: 500px;
+        justify-content: flex-end;
+    }
+    .img-con {
+        max-width: 100%;
+        border-radius: 10px 10px 0 0;
+        height: 200px;
+    }
+    .features>div>h2 {
+        font-size: 20px;
+    }
+    .text-container {
+        flex-grow: 1;
+    }
+}
+
+@media only screen and (max-width:325px) {
+    .text-container>h1 {
+        font-size: 20px;
+    }
+    .text-container>p {
+        font-size: 14px;
+        padding: 5px;
+    }
+    .features>div {
+        font-size: 11px;
+    }
+    .features>div>h2 {
+        font-size: 16px;
+    }
+}
