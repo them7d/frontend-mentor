@@ -1,3 +1,115 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url('assets/fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'RobotoBold';
+    src: url('assets/fonts/Roboto-Bold.ttf') format('truetype');
+}
+
+* {
+    font-family: "RobotoRegular"!important;
+    color: var(--dark-slate-grey);
+    font-size: 14px;
+}
+
+.sing-up-form :is(h1,
+h2,
+h3,
+label) {
+    font-family: "RobotoBold"!important;
+}
+
+.sing-up-form input[type="submit"],
+button.dismiss {
+    background: var(--dark-slate-grey);
+    color: var(--white);
+}
+
+.sing-up-form input[type="email"]:hover {
+    border: 10px solid linear-gradient(to right, var(--tomato), var(--red));
+}
+
+.sing-up-form input[type="submit"]:hover {
+    background: linear-gradient(to right, var(--tomato), var(--red));
+    box-shadow: 0px 8px 20px -8px var(--tomato);
+}
+
 .h-vh {
     height: 100vh;
+}
+
+.sing-up-form .task {
+    margin: 15px 0;
+}
+
+.sing-up-form .task::before {
+    content: "\F633";
+    font-family: "bootstrap-icons";
+    background-color: var(--tomato);
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    color: var(--white);
+    margin: 0 5px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.sing-up-form input {
+    cursor: pointer;
+}
+
+.success h2.header-success::before {
+    content: "\F633";
+    font-family: "bootstrap-icons";
+    background: var(--linear);
+    border-radius: 50%;
+    display: flex;
+    width: 70px;
+    height: 70px;
+    font-size: 60px;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+@media (width<=770px) {
+    main.sing-up-form {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        align-items: center;
+        border-radius: 0;
+    }
+    .imgSignIn {
+        width: 100%;
+    }
+    .imgSignIn img {
+        margin: 0 auto;
+    }
+    .sing-up-form {
+        width: 100%;
+        height: 100vh;
+    }
+    .success {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+:root {
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+    --tomato: hsl(4, 100%, 67%);
+    --red: hsl(347, 98%, 65%);
+    --linear: linear-gradient(to right, var( --tomato), var(--red));
 }
