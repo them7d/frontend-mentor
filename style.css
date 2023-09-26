@@ -12,7 +12,6 @@ body {
 
 * {
     box-sizing: border-box;
-    font-family: Lexend Deca;
 }
 
 body {
@@ -26,7 +25,6 @@ body {
     justify-content: center;
     align-content: center;
     align-items: center;
-    overflow: hidden;
 }
 
 #ii4i {
@@ -54,6 +52,7 @@ body {
 .row {
     color: #ffffff;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .btn {
@@ -76,10 +75,6 @@ body {
 
 .btn.yellow {
     color: #e38826;
-}
-
-.row.overflow-hidden {
-    border-radius: 20px;
 }
 
 .btn:hover {
