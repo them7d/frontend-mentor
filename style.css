@@ -78,6 +78,9 @@ body {
 .bg-pattern {
     top: -290px;
     left: -560px;
+    width: 966px;
+    height: 945px;
+    max-width: unset;
 }
 
 a {
