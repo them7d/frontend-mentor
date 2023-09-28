@@ -12,7 +12,7 @@ body {
     max-width: 50%;
     position: relative;
     overflow: hidden;
-    height: 620px;
+    height: 500px;
 }
 
 .faq-container {
@@ -22,7 +22,7 @@ body {
 }
 
 .container-component {
-    max-width: 1100px;
+    max-width: 950px;
     width: 100%;
     margin: 0px auto 0px auto;
     display: flex;
@@ -113,6 +113,8 @@ a {
 
 .faq-header {
     margin: 30px 0;
+    font-size: 40px;
+    font-weight: 600;
 }
 
 a[aria-expanded="true"] {
