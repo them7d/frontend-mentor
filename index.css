@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan');
+body{
+      /* background: #111;
+      color: white; */
+      font-family: "League Spartan", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+}
+.main{
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+}
+.container.rating-container{
+      min-height: 600px;
+      display: flex;
+      flex-wrap: wrap;
+}
+.section1{
+      padding: 0 140px 0 30px;
+}
+.section1, .section2{
+      color: var(--very-dark-magenta);
+}
+.section1 p{
+      color: var(--dark-grayish-magenta);
+}
+.section2 .rating{
+      background: hsl(303, 10%, 53%, .1);
+      border-radius: 10px;
+      max-width: 400px;
+      padding-left: 2.5rem!important;
+      padding-right: 2.5rem!important;
+}
+.rating-header{
+      font-weight: 600;
+}
+.section3 .rating-card{
+      background: var(--very-dark-magenta);
+      border-radius: 10px;
+}
+.rating-container *{
+      font-size: 15px;
+}
+.section1 h1{
+      font-size: xxx-large!important;
+      font-weight: 600;
+}
+.rating-card img{
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+}
+.rating-card .badges{
+      color: var(--soft-pink);
+}
+.rating-card .user-name{
+      margin-left: 20px;
+}
+.rating-card h2{
+      font-weight: 600;
+      margin-bottom: 0;
+      font-size: 17px;
+}
+.section2 .rating:nth-child(2){
+      margin-left: 60px;
+}
+.section2 .rating:nth-child(3){
+      margin-left: 120px;
+}
+.section3{
+    padding: 60px 0 0 0;
+    color: var(--white);
+}
+.section3>:nth-child(2){
+      margin-top: 60px;
+}
+.section3>:nth-child(3){
+      margin-top: 120px;
+}
+
+@media (width <= 768px){
+      .section1{
+            padding: 0;
+      }
+      .section1 h1{
+            text-align: center;
+      }
+      .section2 .rating{
+            width: 100%;
+            max-width: unset;
+            margin-left: 0!important;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+      }
+      .section3>*{
+            margin-top: 10px!important;
+      }
+      .rating-cards-con{
+            justify-content: center;
+      }
+      .main{
+            margin: 100px auto;
+      }
+      .stars-con{
+            margin-bottom: 10px;
+      }
+      .stars-con>*{
+            margin: 0 3px;
+      }
+      .section1 p{
+            text-align: center;
+      }
+}
+:root{
+      --very-dark-magenta: hsl(300, 43%, 22%);
+      --soft-pink: hsl(333, 80%, 67%);
+      --dark-grayish-magenta: hsl(303, 10%, 53%);
+      --light-grayish-magenta: hsl(300, 24%, 96%);
+      --white: hsl(0, 0%, 100%);
+}
