@@ -76,7 +76,26 @@ body{
 .section3>:nth-child(3){
       margin-top: 120px;
 }
-
+.bg-pattern-top,
+.bg-pattern-bottom,
+.bg-pattern-top-mobile,
+.bg-pattern-bottom-mobile{
+      display: none;
+}
+@media (width>= 768px){
+      .bg-pattern-top{
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+      }
+      .bg-pattern-bottom{
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+      }
+}
 @media (width <= 768px){
       .section1{
             padding: 0;
@@ -109,6 +128,18 @@ body{
       }
       .section1 p{
             text-align: center;
+      }
+      .bg-pattern-top-mobile{
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+      }
+      .bg-pattern-bottom-mobile{
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
       }
 }
 :root{
