@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
+body {
+    margin: 0;
+    min-height: 100vh;
+    height: 100%;
+    background: var(--light-grayish-blue);
+    font-family: 'Manrope', sans-serif;
+}
 .share-icon {
     fill: var(--very-dark-grayish-blue);
     background: var(--light-grayish-blue);
@@ -9,12 +17,6 @@
     border-radius: 50%;
 }
 
-body {
-    margin: 0;
-    min-height: 100vh;
-    height: 100%;
-    background: var(--light-grayish-blue);
-}
 
 .main {
     display: flex;
@@ -24,7 +26,7 @@ body {
 }
 
 .article-container {
-    max-width: 1100px;
+    max-width: 1000px;
     background: var(--white);
     color: var(--very-dark-grayish-blue);
     border-radius: 20px;
@@ -51,7 +53,7 @@ body {
 }
 
 .text-card-container {
-    padding: 50px;
+    padding: 20px 50px;
 }
 
 .creator-info h2 {
@@ -101,9 +103,6 @@ p.date {
 }
 
 @media (width >=768px) {
-    img.drawers {
-        width: 500px;
-    }
     .share:hover .popup {
         display: block;
         position: absolute;
@@ -123,8 +122,7 @@ p.date {
     }
     img.drawers {
         height: 100%;
-        width: auto;
-        max-width: 500px;
+        max-width: 450px;
         border-radius: 20px 0 0 20px;
     }
     .share {
