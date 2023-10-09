@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+body{
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+}
+.main{
+      flex-grow: 1;
+      max-width: 700px;
+      margin: 50px auto 20px;
+}
+.illustration{
+      max-width: 640px;
+      max-height: 391px;
+      width: 100%;
+      height: auto;
+}
+footer{
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: var(--gray);
+      padding: 0 0 20px;
+}
+footer .social-media a{
+      color: var(--blue);
+      text-decoration: none;
+      margin: 0 10px;
+      display: flex;
+      width: 30px;
+      height: 30px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      box-shadow: 0 0 1px;
+}
+footer .social-media a:hover{
+      background-color: var(--blue);
+      color: white;
+}
+footer .social-media{
+      margin-bottom: 15px;
+      display: flex;
+}
+.email-notify input[type="email"]{
+      border: 1px solid var(--blue-03);
+      flex-grow: 1;
+      font-size: 16px;
+      margin-right: 30px;
+}.email-notify input[type="email"]:focus{
+      outline: none;
+}
+.email-notify input[type="email"]::placeholder{
+      color: var(--pale-blue);
+}
+.email-notify input[type="email"]:invalid{
+      border-color: var(--light-red);
+}
+.email-notify .notify-me{
+      background-color: var(--blue);
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 15px 60px;
+      font-size: 16px;
+      font-weight: 600;
+      box-shadow: 0 4px 6px 2px var(--pale-blue);
+}
+.email-notify .notify-me:hover{
+      background: var(--pale-blue);
+}
+.email-notify .notify-me:focus{
+      outline:none;
+}
+.email-notify>*{
+      padding: 15px 20px;
+      border-radius: 40px;
+}
+.email-notify{
+    display: flex;
+    margin-bottom: 40px;
+    position: relative;
+}
+main>*{
+      margin: 20px auto;
+      display: block;
+}
+main h1{
+      font-weight: 300;
+      color: var(--gray);
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 10px;
+}
+.describe{
+      text-align: center;
+      font-size: 18px;
+      margin-top: 0;
+      margin-bottom: 30px;
+}
+.bold{
+      font-weight: 700;
+      color: black;
+}
+.error-message{
+      display: none;
+      order: 2;
+}
+.email-notify input[type="email"]:invalid ~ .error-message{
+      display: block;
+      color: var(--light-red);
+      position: absolute;
+      bottom: -45px;
+      font-size: 12px;
+}
+.copyright{
+      font-size: 13px;
+}
+@media(width<=768px){
+      .main{
+            padding: 0 40px;
+      }
+      .email-notify{
+            flex-direction: column;
+      }
+      .email-notify input[type="email"]{
+      margin: 0;
+      }
+      .email-notify .notify-me{
+            order: 3;
+      }
+      .email-notify input[type="email"]:invalid ~ .error-message{
+            position: relative;
+            order: 2;
+            bottom: unset;
+            margin: 0;
+            padding: 10px 25px;
+      }
+      .email-notify input[type="email"]:valid ~ .notify-me{
+            margin-top: 15px;
+      }
+}
+:root{
+      --pale-blue: hsl(223, 100%, 88%);
+      --light-red: hsl(354, 100%, 66%);
+      --gray: hsl(0, 0%, 59%);
+      --blue: hsl(223, 87%, 63%);
+      --blue-03: hsla(223, 87%, 63%, 0.3);
+      --very-dark-blue: hsl(209, 33%, 12%);
+}
