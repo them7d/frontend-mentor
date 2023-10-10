@@ -1,0 +1,20 @@
+# Avoid accidental Sketch file upload 
+*.sketch
+*.xd
+*.fig
+.DS_Store
+style-guide.md
+README-template.md
+design/active-states.jpg
+design/desktop-design.jpg
+design/mobile-design.jpg
+
+
+
+
+
+
+
+
+
+
