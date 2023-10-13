@@ -108,7 +108,7 @@ input{
       margin: 0;
 }
 .calculator-container input[type=number] {
-      -moz-appearance: textfield;
+      --moz-appearance: textfield;
 }
 
 .form__item label{
