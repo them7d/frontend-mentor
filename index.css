@@ -145,6 +145,24 @@ input{
 .form{
       display:flex;
 }
+@media (width<= 768px){
+      .arrow-con{
+            right: 50%;
+            margin-right: -30px;
+      }
+      .result__item{
+            font-size: 50px;
+      }
+      .calculator-container input{
+            font-size: 20px;
+      }
+      .form__item:not(:first-child){
+            margin-left: 15px;
+      }
+      .form{
+            justify-content: space-around;
+      }
+}
 :root{
       --purple: hsl(259, 100%, 65%);
       --light-red: hsl(0, 100%, 67%);
