@@ -1,0 +1,14 @@
+*.sketch
+*.fig
+*.xd
+.DS_Store
+.prettierignore
+README-template.md
+style-guide.md
+design/active-states.jpg
+design/desktop-completed.jpg
+design/desktop-design.jpg
+design/desktop-error-invalid.jpg
+design/mobile-design.jpg
+design/desktop-error-whole-form.jpg
+design/desktop-error-empty.jpg
