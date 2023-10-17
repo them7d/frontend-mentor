@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          'space-grotesk': ['"Space Grotesk"', 'sans-serif']
+        },
+        extend: {
+          screens: {
+            xs: '375px'
+          },
+          colors: {
+            'purple': '#6448fe',
+            'dark-purple': '#600594',
+            'red': '#ff5252',
+            'white': '#ffffff',
+            'light-grayish-violet': '#dedddf',
+            'dark-grayish-violet': '#8e8593',
+            'very-dark-violet': '#21092f',
+            'gradient': 'linear-gradient(125deg, rgba(100,72,254,1) 0%, rgba(96,5,148,1) 100%)',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body class="font-space-grotesk">
+  <main class="main min-h-[100vh] md:flex">
+    <div class="images-side z-20 md:w-[30%] h-full">
+      <img class="max-h-[100vh] md:block xs:hidden h-[100vh]" src="./images/bg-main-desktop.png" alt="bg main img">
+      <img class="xs:block md:hidden w-full max-h-60" src="./images/bg-main-mobile.png" alt="background main mobile">
+      <div
+        class="card-from-front text-white bg-[url('./images/bg-card-front.png')] bg-no-repeat bg-contain xs:w-[300px] xs:h-[165px] md:w-[350px] md:h-[192px] xl:w-[447px] xl:h-[245px] absolute xl:top-[140px] xl:left-[140px] md:left-[50px] xs:top-[120px] xs:left-[20px] xs:p-3 md:p-6 flex flex-col z-30">
+        <div class="logo grow">
+          <img src="./images/card-logo.svg" alt="card logo">
+        </div>
+        <div class="cardnumber-placeholder text-center my-3 xs:text-lg md:text-2xl xl:text-[33px] tracking-wider"
+          id="card_number_holder">
+          0000 0000 0000 0000
+        </div>
+        <div class="flex justify-between font-lightmd:text-base xs:text-xs">
+          <div id="card_name_holder uppercase">Jane Appleseed</div>
+          <div id="exp"><span id="MM">00</span>/<span id="YY">00</span></div>
+        </div>
+      </div>
+      <div
+        class="card-from-back text-white bg-[url('./images/bg-card-back.png')] bg-no-repeat bg-contain xl:w-[447px] xl:h-[245px] md:w-[350px] md:h-[192px] xs:w-[300px] xs:h-[165px] absolute xl:top-[400px] xl:left-[200px] md:top-[330px] md:left-[70px] xs:top-[25px] xs:right-[20px] z-20">
+        <span
+          class="last-3-num absolute xl:translate-x-[360px] xl:translate-y-[107px] md:translate-x-[275px] md:translate-y-[82px] xs:translate-x-[235px] xs:translate-y-[69px]"
+          id="cvc_holder">
+          000
+        </span>
+      </div>
+    </div>
+    <div class="form-side relative grow md:flex md:flex-col md:justify-center mt-20 mx-6">
+      <form class="m-auto flex flex-col max-w-[400px] w-full">
+        <div class="item flex flex-col mb-5">
+          <label for="cardholder" class="mb-2 text-very-dark-violet uppercase">Cardholder Name</label>
+          <input class="border p-2 rounded-lg focus:outline-none hover:border-purple focus:border-purple cursor-pointer"
+            type="text" name="cardholder" id="cardholder" placeholder="e.g. Jane Appleseed">
+          <span id="err_name" class="error-placeholder text-xs font-red text-red my-2"></span>
+        </div>
+        <div class="item flex flex-col mb-5">
+          <label for="cardnumber" class="mb-2 text-very-dark-violet uppercase">Card Number</label>
+          <input class="border p-2 rounded-lg focus:outline-none hover:border-purple focus:border-purple cursor-pointer"
+            type="text" name="cardnumber" id="cardnumber" placeholder="e.g. 1234 5678 9123 0000" maxlength="19" />
+          <span class="error-placeholder error-cardnumber text-xs font-red text-red my-2"></span>
+        </div>
+        <div class="flex mb-5">
+          <div class="item max-w-[50%]">
+            <label for="month" class="mb-2 block text-very-dark-violet uppercase">Exp. Date (MM/YY)</label>
+            <div class="flex">
+              <input
+                class="border p-2 rounded-lg max-w-[50%] focus:outline-none hover:border-purple focus:border-purple cursor-pointer"
+                type="text" name="month" id="month" placeholder="MM" maxlength="2" />
+              <input
+                class="border p-2 rounded-lg max-w-[50%] ml-2 focus:outline-none hover:border-purple focus:border-purple cursor-pointer"
+                type="text" name="year" id="year" placeholder="YY" maxlength="2" />
+            </div>
+            <span class="error-placeholder error-exp text-xs font-red text-red my-2"></span>
+          </div>
+          <div class="item max-w-[50%] pl-5">
+            <label for="cvc" class="mb-2 block text-very-dark-violet uppercase">CVC</label>
+            <input
+              class="border p-2 rounded-lg max-w-full focus:outline-none hover:border-purple focus:border-purple cursor-pointer"
+              type="text" name="cvc" id="cvc" placeholder="e.g. 123" maxlength="3" />
+            <span class="error-placeholder error-cvc text-xs font-red text-red my-2"></span>
+          </div>
+        </div>
+        <button class="bg-very-dark-violet hover:bg-very-dark-violet/90 text-white py-2.5 rounded-lg animate__animated"
+          id="confirm" type="submit">Confirm</button>
+      </form>
+      <div class="thank-screen hidden">
+        <div class="z-10 absolute top-0 bottom-0 right-0 left-0 flex justify-center items-center bg-white">
+          <div class="thank-container max-w-[350px] w-full flex flex-col items-center">
+            <img class="w-[80px] h-[80px] mb-2" src="./images/icon-complete.svg" alt="icon complete">
+            <h3 class="text-2xl mt-5 mb-2 uppercase text-very-dark-violet">Thank you!</h3>
+            <div class="text-dark-grayish-violet">We've added your card details</div>
+            <button class="continue mt-6 text-white bg-very-dark-violet py-2 w-full rounded-md">Continue</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="./script.js"></script>
+</body>
+
+</html>
