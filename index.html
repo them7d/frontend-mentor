@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Expenses chart component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          'space-grotesk': ["'DM Sans'", 'sans-serif']
+        },
+        extend: {
+          screens: {
+            xs: '375px'
+          },
+          colors: {
+            'soft-red': '#ec775f',
+            'cyan': '#76b5bc',
+            'dark-brown': '#382314',
+            'medium-brown': '#93867b',
+            'cream': '#f8e9dd',
+            'very-pale-orange': '#fffaf5',
+          }
+        }
+      }
+    }
+  </script>
+
+</head>
+
+<body class="bg-cream font-space-grotesk">
+  <main class="main flex  flex-col justify-center  min-h-[100vh] xs:px-3">
+    <div class="container max-w-[400px] m-auto">
+      <div class="info-con text-white mb-3 py-4 px-5 rounded-xl bg-soft-red flex">
+        <div class="grow">
+          <div class="text-xs my-2">My balance</div>
+          <div class="balance text-2xl font-semibold">$921.48</div>
+        </div>
+        <div class="logo flex items-center">
+          <img class="max-h-[48px] max-w-[72px]" src="./images/logo.svg" alt="logo">
+        </div>
+      </div>
+      <div class="analytic-con bg-white p-6 pb-7 rounded-xl">
+
+        <h1 class="text-xl font-semibold mb-7">Spending - Last 7 days</h1>
+        <div class="graphs-con">
+          <div>
+            <canvas id="chart_div"></canvas>
+          </div>
+        </div>
+        <div class="flex justify-between text-medium-brown mt-6 pt-6 border-t">
+          <div>
+            <div class="text-sm">Total this month</div>
+            <div class="text-4xl text-dark-brown font-semibold">$478.33</div>
+          </div>
+          <div>
+            <div class="flex justify-end text-sm font-semibold text-dark-brown">+2.4%</div>
+            <div class="text-sm">from last month</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+
+    const ctx = document.getElementById('chart_div');
+    const data = {
+      labels: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
+      datasets: [{
+        data: [10, 20, 35, 18, 15, 28, 16],
+        borderSkipped: false,
+      }],
+    };
+    const x = new Chart(ctx, {
+      type: 'bar',
+      data: data,
+      options: {
+        elements: {
+          bar: {
+            backgroundColor: ['#ec775f', '#ec775f', '#76b5bc', '#ec775f', '#ec775f', '#ec775f', '#ec775f'],
+            borderRadius: 4,
+          }
+        },
+        plugins: {
+          customCanvasBackgroundColor: {
+            color: "white"
+          },
+          legend: {
+            display: false
+          },
+          tooltip: {
+            callbacks: {
+              title: function () {
+                return "";
+              },
+              label: function (context) {
+                let label = context.dataset.label || '';
+
+                if (label) {
+                  label;
+                }
+                if (context.parsed.y !== null) {
+                  label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(context.parsed.y);
+                }
+                return label;
+              },
+              afterLabel: function () {
+                return "";
+              }
+            },
+            displayColors: false,
+            backgroundColor: '#382314',
+            titleFontSize: 16,
+            bodyFontSize: 14,
+            yAlign: 'top',
+            position: 'top_minus_10',
+            caretSize: 0,
+          }
+        },
+        scales: {
+          y: {
+            grid: {
+              display: false,
+              beginAtZero: true
+            },
+            ticks: {
+              display: false,
+            },
+            offset: true,
+            border: {
+              display: false
+            }
+          },
+          x: {
+            grid: {
+              display: false,
+            },
+            border: {
+              display: false
+            }
+          }
+        }
+      }
+    });
+    Chart.Tooltip.positioners.top_minus_10 = function (elements, position) {
+      var tooltip = this;
+      console.log(elements[0]['element']["y"]);
+      return {
+        y: elements[0]['element']["y"] - 10
+      };
+    };
+
+  </script>
+</body>
+
+</html>
