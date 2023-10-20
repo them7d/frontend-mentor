@@ -122,7 +122,6 @@
             titleFontSize: 16,
             bodyFontSize: 14,
             yAlign: 'top',
-            position: 'top_minus_10',
             caretSize: 0,
           }
         },
@@ -151,13 +150,6 @@
         }
       }
     });
-    Chart.Tooltip.positioners.top_minus_10 = function (elements, position) {
-      var tooltip = this;
-      console.log(elements[0]['element']["y"]);
-      return {
-        y: elements[0]['element']["y"] - 10
-      };
-    };
 
   </script>
 </body>
