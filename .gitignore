@@ -1,0 +1,15 @@
+*.sketch
+*.fig
+*.xd
+.DS_Store
+.prettierignore
+style-guide.md
+README-template.md
+design/active-states.jpg
+design/desktop-design.jpg
+design/mobile-design.jpg
+design/mobile-menu-collapsed.jpg
+design/mobile-menu-expanded.jpg
+design/desktop-preview.jpg
+.vscode
+tailwind.config.js

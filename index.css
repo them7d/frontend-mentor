@@ -1,0 +1,9 @@
+:root{
+      --almost-white: #fafafa;
+      --medium-gray: #696969;
+      --almost-black: #141414;
+}
+.animate__animated{
+      animation-iteration-count: 1;
+      animation-fill-mode:forwards;
+}
