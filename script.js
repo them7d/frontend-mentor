@@ -35,3 +35,4 @@ weekly_btn.addEventListener("click", () => {
 monthly_btn.addEventListener("click", () => {
       setData("month");
 });
+setData("week");
