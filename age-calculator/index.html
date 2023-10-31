@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <main class="main">
+    <div class="calculator-container">
+      <div class="form">
+        <div class="form__item" id="in_day">
+          <label for="day" id="label-day">Day</label>
+          <input type="number" name="day" id="day" placeholder="DD" min="1" max="31">  
+          <div class="day-error_message"></div>
+        </div>
+        <div class="form__item" id="in_month">
+          <label for="month" id="label-month">Month</label>
+          <input type="number" name="month" id="month" placeholder="MM" min="1" max="12">
+          <div class="month-error_message"></div>
+        </div>
+        <div class="form__item" id="in_year">
+          <label for="year" id="label-year">Year</label>
+          <input type="text" name="year" id="year" placeholder="YYYY" maxlength="4">
+          <div class="year-error_message"></div>
+        </div>
+      </div>
+      <div class="separator">
+        <hr/>
+        <button type="submit" class="arrow-con">
+          <img src="./assets/images/icon-arrow.svg" alt="arrow" class="arrow-icon">
+        </button>
+      </div>
+      <h1>
+        <div class="result">
+          <div class="result__item">
+            <span class="color-pruple years-placeholder date-placeholder"></span><div>years</div>
+          </div>
+          <div class="result__item">
+            <span class="color-pruple months-placeholder date-placeholder"></span><div>months</div>
+          </div>
+          <div class="result__item">
+            <span class="color-pruple days-placeholder date-placeholder"></span><div>days</div>
+          </div>
+        </div>
+      </h1>
+    </div>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
