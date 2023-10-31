@@ -1,0 +1,37 @@
+:root,
+* {
+  --strong-cyan: #26c0ab;
+  --very-dark-cyan: #00494d;
+  --dark-grayish-cyan: #5e7a7d;
+  --grayish-cyan: #7f9c9f;
+  --light-grayish-cyan: #c5e4e7;
+  --very-light-grayish-cyan: #f4fafa;
+  --white: #ffffff;
+  --tw-ring-color: var(--light-grayish-cyan) !important;
+}
+div .appearance-none:checked ~ label {
+  background: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input {
+  font-size: 24px !important;
+}
+::placeholder {
+  color: red;
+  opacity: 1; /* Firefox */
+}
+
+input::-ms-input-placeholder {
+  /* Edge 12-18 */
+  color: red;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
