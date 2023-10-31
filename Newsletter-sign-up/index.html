@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+        
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
+</head>
+
+<body class="h-vh flex justify-center items-center bg-[var(--charcoal-grey)]">
+
+    <!-- Sign-up form start -->
+    <main class="sing-up-form flex max-w-[800px] bg-[var(--white)] p-4 rounded-3xl">
+        <div class="signInContainer px-12 py-16">
+            <h1 class="text-6xl">Stay updated!</h1>
+            <p class="py-6">
+                Join 60,000+ product managers receiving monthly updates on:
+            </p>
+            <div class="task flex items-center">Product discovery and building what matters</div>
+            <div class="task flex items-center">Measuring to ensure updates are a success</div>
+            <div class="task flex items-center">And much more!</div>
+            <form action="#" class="pt-4">
+
+                <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+                <input type="email" name="email" id="email" placeholder="email@company.com " class="block w-full rounded-md border-0 py-3 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 sm:text-sm sm:leading-6">
+                <input type="submit" value="Subscribe to monthly newsletter" class="rounded-md p-3 my-5 w-full" id="submit">
+
+            </form>
+        </div>
+        <div class="imgSignIn">
+            <img src="./assets/images/illustration-sign-up-desktop.svg" alt="illustration-sign-up">
+        </div>
+        <!-- Sign-up form end -->
+
+        <!-- Success message start -->
+        <div class="success hidden max-w-[450px] p-14">
+            <div>
+                <h2 class="header-success text-6xl mb-8">Thanks for subscribing!</h2>
+                <p>A confirmation email has been sent to
+                    <a href="mailto:ash@loremcompany.com" class="font-bold">ash@loremcompany.com</a> . Please open it and click the button inside to confirm your subscription.</p>
+            </div>
+            <button class="dismiss rounded-md p-3 my-5 w-full">Dismiss message</button>
+        </div>
+        <!-- Success message end -->
+    </main>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
