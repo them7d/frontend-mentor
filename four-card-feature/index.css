@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+body{
+      font-family: 'Poppins', sans-serif!important;
+}
+.main{
+      min-height: 100vh;
+      display: flex;
+      color: var(--very-dark-blue);
+}
+.card-describe,.describe{
+      color: var(--grayish-blue);
+}
+.thin{
+      font-weight: 100;
+      color: var(--grayish-blue);
+}
+.green-card-feature{
+      border-top: 3px solid var(--cyan);
+}
+.red-card-feature{
+      border-top: 3px solid var(--red);
+}
+.yellow-card-feature{
+      border-top: 3px solid var(--orange);
+}
+.blue-card-feature{
+      border-top: 3px solid var(--blue);
+}
+.blue-card-feature,.yellow-card-feature,.red-card-feature,.green-card-feature{
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.describe{
+      max-width: 500px;
+      margin: 0 auto;
+}
+.card-feature{
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      padding: 1.75rem!important;
+      border-radius: 5px;
+}
+.card-feature p{
+      flex-grow: 1;
+      margin-bottom: 40px;
+      padding: 0 20px 0 0;
+}
+.card-feature img{
+      width: 64px;
+      height: 64px;
+      align-self: flex-end;
+}
+h2{
+      font-size: 1.5em!important;
+      margin-bottom: .25rem!important;
+}
+.vertical .card-con{
+      margin: 25px 0;
+}
+.cards-feature-container{
+      width: fit-content;
+}
+@media (width>=768px){
+      .cards-feature-container>*{
+            margin: 0 15px;
+      }
+}
+@media(width<=768px){
+      .con{
+            padding: 40px;
+            margin: 30px 0;
+      }
+}
+:root{
+--red: hsl(0, 78%, 62%);
+--cyan: hsl(180, 62%, 55%);
+--orange: hsl(34, 97%, 64%);
+--blue: hsl(212, 86%, 64%);
+--very-dark-blue: hsl(234, 12%, 34%);
+--grayish-blue: hsl(229, 6%, 66%);
+--very-light-gray: hsl(0, 0%, 98%);
+}
