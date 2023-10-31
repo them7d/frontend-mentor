@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Interactive rating component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Rating state start -->
+    <main class="card">
+        <div class="raingFace">
+            <i class="fa-solid fa-star"></i>
+            <h2>How did we do?</h2>
+            <p class="describe">
+                Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
+            </p>
+            <div class="stars-con">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+            </div>
+            <button class="btn submit">Submit</button>
+            <!-- Rating state end -->
+        </div>
+        <!-- Thank you state start -->
+        <div class="thank hidden">
+            <img src="./images/illustration-thank-you.svg" alt="illustration" class="img-thank">
+            <div class="raing-result">
+                You selected <span id="star-rated">0</span> out of 5
+            </div>
+            <h2> Thank you! </h2>
+            <p class="describe">
+                We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!
+            </p>
+        </div>
+        <!-- Thank you state end -->
+    </main>
+</body>
+<script src="script.js"></script>
+
+</html>
