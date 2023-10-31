@@ -90,9 +90,12 @@
               50%
             </label>
           </div>
-          <div class="w-[30%] flex mt-3">
-            <input type="number" id="custom" name="tabs" placeholder="Custom"
-              class="bg-very-light-grayish-cyan text-sm text-center text-very-dark-cyan cursor-pointer flex items-center justify-center truncate uppercase select-none font-semibold rounded-md py-2 w-full" />
+          <div class="w-[30%] flex mt-3 relative">
+            <label for="customradio" id="customradiolabel"
+              class="z-20 absolute top-0 right-0 bottom-0 left-0 bg-very-light-grayish-cyan text-very-dark-cyan text-[20px] flex items-center justify-center cursor-pointer">Custom</label>
+            <input type="radio" id="customradio" name="tabs" class="appearance-none">
+            <input type="number" id="custom" placeholder="Custom"
+              class="bg-very-light-grayish-cyan free-text text-lg text-right placeholder:text-center placeholder:text-very-dark-cyan text-very-dark-cyan cursor-pointer flex items-center justify-center truncate select-none font-semibold rounded-md py-2 w-full focus:ring-2 outline-none px-[3px]" />
           </div>
         </div>
         <div class="relative mt-6">
@@ -104,7 +107,7 @@
                   d="M9.573 7.729c.406 0 .784.07 1.126.209.342.14.639.33.881.569.232.227.438.503.614.82a5.1 5.1 0 01.407.949c.097.312.178.654.242 1.016.062.359.105.699.126 1.011.02.307.031.624.031.945 0 .836-.259 1.512-.768 2.01-.504.492-1.17.742-1.98.742H2.748c-.81 0-1.477-.25-1.98-.742C.259 14.76 0 14.084 0 13.248c0-.322.01-.64.032-.945.02-.312.063-.652.126-1.01.063-.363.144-.705.242-1.017.1-.323.238-.643.407-.948.176-.318.382-.594.613-.821.243-.238.54-.43.882-.57.342-.138.72-.208 1.125-.208.16 0 .313.067.61.265.183.123.397.264.636.421.204.134.48.259.822.372.333.11.671.167 1.005.167a3.19 3.19 0 001.006-.167c.341-.113.618-.238.822-.372l.636-.42c.296-.2.45-.266.61-.266zM6.598 0C7.63 0 8.522.38 9.252 1.129s1.1 1.666 1.1 2.724c0 1.06-.37 1.976-1.1 2.725-.73.75-1.623 1.13-2.654 1.13-1.03 0-1.924-.38-2.653-1.13-.73-.749-1.1-1.666-1.1-2.725 0-1.058.37-1.975 1.1-2.724C4.675.379 5.567 0 6.598 0z" />
               </svg>
             </div>
-            <input type="number" id="numberofpeople" name="numberofpeople"
+            <input type="number" id="numberofpeople" name="numberofpeople" placeholder="0"
               class="w-full bg-very-light-grayish-cyan rounded focus:ring-2 outline-none text-very-dark-cyan py-1 px-3 leading-8 text-end"
               value="5">
           </div>
@@ -117,8 +120,8 @@
               Tip Amount
               <div class="text-xs text-dark-grayish-cyan">/ person</div>
             </div>
-            <div class="text-strong-cyan text-4xl" id="tipamount">
-              $4.27
+            <div class="text-strong-cyan text-4xl">
+              $<span id="tipamount">4.27</span>
             </div>
           </div>
           <div class="flex justify-between mt-10">
@@ -126,12 +129,12 @@
               Total
               <div class="text-xs text-dark-grayish-cyan">/ person</div>
             </div>
-            <div class="text-strong-cyan text-4xl" id="total">
-              $32.79
+            <div class="text-strong-cyan text-4xl">
+              $<span id="total">32.79</span>
             </div>
           </div>
         </div>
-        <button
+        <button id="reset"
           class="flex justify-center uppercase w-full text-very-dark-cyan bg-strong-cyan border-0 py-2 px-6 focus:outline-none  rounded text-lg">
           Reset
         </button>

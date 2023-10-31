@@ -18,17 +18,8 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-input {
+input:not([class*='free-text']) {
   font-size: 24px !important;
-}
-::placeholder {
-  color: red;
-  opacity: 1; /* Firefox */
-}
-
-input::-ms-input-placeholder {
-  /* Edge 12-18 */
-  color: red;
 }
 
 /* Firefox */
