@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Advice generator app</title>
+  <link rel="stylesheet" href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          "manrope": ['"Manrope"', 'sans-serif']
+        },
+        screens: {
+          xs: "375px"
+        },
+        colors: {
+          "light-cyan": '#cee3e9',
+          "neon-green": '#52ffa8',
+          "grayish-blue": '#4e5d73',
+          "dark-grayish-blue": '#323a49',
+          "dark-blue": '#1f2632',
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="font-manrope">
+  <main class="main bg-dark-blue min-h-[100vh] flex justify-center items-center text-light-cyan">
+    <div class="container relative max-w-[510px] bg-dark-grayish-blue rounded-lg p-8 pb-16">
+      <div class="advice-header flex justify-center text-neon-green">
+        Advice # <span class="advice-number"></span>
+      </div>
+      <div class="text-center block my-6 text-[28px]">
+        <h1 class="inline" id="advice">
+          "
+          <div class="ph-items bg-[transparent] border-0 p-0">
+            <div class="ph-col-12">
+              <div class="ph-row flex justify-center">
+                <div class="ph-col-8 big rounded-full"></div>
+                <div class="ph-col-12 big rounded-full"></div>
+                <div class="ph-col-6 big rounded-full"></div>
+              </div>
+            </div>
+          </div>
+          "
+        </h1>
+      </div>
+      <div class="flex items-center justify-center w-full">
+        <svg class="xs:hidden md:block" width="444" height="16" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none">
+            <path fill="#4F5D74" d="M0 8h196v1H0zM248 8h196v1H248z" />
+            <g transform="translate(212)" fill="#CEE3E9">
+              <rect width="6" height="16" rx="3" />
+              <rect x="14" width="6" height="16" rx="3" />
+            </g>
+          </g>
+        </svg>
+        <svg class="md:hidden xs:block" width="295" height="16" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" fill-rule="evenodd">
+            <path fill="#4F5D74" d="M0 8h122v1H0zM173 8h122v1H173z" />
+            <g transform="translate(138)" fill="#CEE3E9">
+              <rect width="6" height="16" rx="3" />
+              <rect x="14" width="6" height="16" rx="3" />
+            </g>
+          </g>
+        </svg>
+      </div>
+      <button type="submit" id="get-advice"
+        class="bg-neon-green flex justify-center items-center hover:shadow-lg hover:shadow-neon-green w-[56px] h-[56px] rounded-full absolute bottom-[-28px] left-[50%] ml-[-28px]">
+        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M20 0H4a4.005 4.005 0 0 0-4 4v16a4.005 4.005 0 0 0 4 4h16a4.005 4.005 0 0 0 4-4V4a4.005 4.005 0 0 0-4-4ZM7.5 18a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm0-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm4.5 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm4.5 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm0-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z"
+            fill="#202733" />
+        </svg>
+      </button>
+    </div>
+  </main>
+  <script src="./script.js"></script>
+
+</html>
