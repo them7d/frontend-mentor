@@ -1,0 +1,13 @@
+
+*.sketch
+*.xd
+*.fig
+.DS_Store
+.prettierignore
+README-template.md
+style-guide.md
+design/active-states.jpg
+design/desktop-design.jpg
+design/mobile-design.jpg
+README-template.md
+style-guide.md
