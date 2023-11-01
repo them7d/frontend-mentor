@@ -1,0 +1,47 @@
+:root {
+  --soft-red: #fe7867;
+  --yellow: #fad400;
+  --yellow-underline: #fad40080;
+  --soft-red-underline: #fe786750;
+  --dark-desaturatedcyan: #25564b;
+  --dark-blue: #19536b;
+  --dark-moderatecyan: #458c7e;
+  --bg-moderatecyan: #90d4c5;
+  --very-dark-esaturated-blue: #23303e;
+  --very-dark-grayish-blue: #5a636c;
+  --dark-grayish-blue: #818498;
+  --grayish-blue: #a7abae;
+  --white: #ffffff;
+}
+.underline-yellow {
+  text-decoration: underline solid var(--yellow-underline) 5px;
+  text-underline-position: auto;
+}
+.underline-yellow:hover {
+  text-decoration-color: var(--yellow);
+}
+.underline-pink {
+  text-decoration: underline solid var(--soft-red-underline) 5px;
+  text-underline-position: auto;
+}
+.underline-pink {
+  text-decoration-color: var(--soft-red);
+}
+.custom-margin-top {
+  margin-top: calc(100% / 5 - 80px);
+}
+.custom-margin-top-img {
+  margin-top: calc(100% / 5 + 100px);
+}
+.social a:hover svg path {
+  fill: white !important;
+}
+nav.menu::after {
+  width: 0;
+  top: -14px;
+  right: -14.25px;
+  transform: rotate(-90deg);
+  border-right: 30px solid transparent;
+  border-left: 30px solid transparent;
+  border-bottom: 30px solid white;
+}
