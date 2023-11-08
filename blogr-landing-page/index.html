@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | [Blogr]</title>
+  <script src='https://cdn.tailwindcss.com'></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          'Barlow': ['Barlow', 'sans-serif'],
+          'Fraunces': ['Fraunces', 'serif']
+        },
+        screens: {
+          'xs': '375px',
+          'md': '768px',
+        },
+        colors: {
+          'light-red': '#ff525d',
+          'very-light-red': '#ff7a85',
+          'very-dark-blue': '#1f3f5b',
+          'white': '#ffffff',
+          'grayish-blue': '#c8c8cb',
+          'very-dark-grayish-blue': '#4b5862',
+          'very-dark-black-blue': '#25252d',
+          'gray': '#ededed'
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/mini-functions-js@1.0.8/dist/index.js"></script>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <main class="main max-w-[1920px] mx-auto">
+    <header class="text-gray-600 body-font absolute top-0 right-0 left-0 z-20">
+      <div
+        class="container xs:max-w-[650px] md:max-w-[1024px] mx-auto flex flex-wrap p-5 md:flex-row items-center justify-between">
+        <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+          <svg width="101" height="40" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M0 30.803V1.486h10.653c1.982 0 3.695.31 5.14.93 1.446.619 2.56 1.5 3.345 2.642.785 1.142 1.177 2.484 1.177 4.026 0 1.404-.303 2.636-.909 3.695a6.48 6.48 0 01-2.56 2.498c1.487.578 2.643 1.494 3.469 2.746.826 1.253 1.239 2.732 1.239 4.439 0 1.707-.44 3.18-1.322 4.418-.88 1.239-2.12 2.202-3.716 2.89-1.596.688-3.482 1.033-5.657 1.033H0zM5.946 6.565v6.73h4.046c1.35 0 2.388-.282 3.118-.846.73-.564 1.094-1.397 1.094-2.498 0-1.101-.365-1.94-1.094-2.519-.73-.578-1.769-.867-3.118-.867H5.946zm0 19.159h4.624c1.542 0 2.732-.33 3.572-.991.84-.66 1.26-1.61 1.26-2.85 0-1.238-.42-2.188-1.26-2.848-.84-.66-2.03-.991-3.572-.991H5.946v7.68zm19.282 5.079V0h5.781v30.803h-5.78zm20.893.619c-1.624 0-3.124-.29-4.5-.867a10.94 10.94 0 01-3.593-2.416 10.96 10.96 0 01-2.374-3.654c-.564-1.404-.846-2.931-.846-4.583 0-1.652.289-3.173.867-4.563a11.354 11.354 0 012.415-3.654 10.96 10.96 0 013.634-2.436c1.39-.578 2.91-.867 4.562-.867 1.625 0 3.125.289 4.501.867a10.94 10.94 0 013.592 2.416 11.01 11.01 0 012.375 3.633c.564 1.39.846 2.911.846 4.563 0 1.651-.289 3.179-.867 4.583a11.297 11.297 0 01-2.416 3.675 10.96 10.96 0 01-3.633 2.436c-1.39.578-2.911.867-4.563.867zm.083-5.203c1.046 0 1.982-.275 2.808-.825.825-.551 1.48-1.301 1.96-2.25.483-.95.723-2.03.723-3.242 0-1.211-.24-2.292-.722-3.241-.482-.95-1.136-1.7-1.961-2.25-.826-.551-1.762-.826-2.808-.826-1.046 0-1.982.275-2.808.825-.826.55-1.48 1.301-1.961 2.25-.482.95-.723 2.03-.723 3.242 0 1.211.241 2.292.723 3.241.482.95 1.135 1.7 1.961 2.25.826.551 1.762.826 2.808.826zm24.155 3.964a9.13 9.13 0 01-3.86-.826 9.492 9.492 0 01-3.118-2.291c-.881-.977-1.57-2.12-2.065-3.427-.495-1.308-.743-2.719-.743-4.233 0-1.569.255-3.02.764-4.356a10.614 10.614 0 012.147-3.489 10.174 10.174 0 013.22-2.333c1.225-.564 2.554-.846 3.985-.846 1.404 0 2.67.282 3.799.846a7.402 7.402 0 012.807 2.457l.124-2.684h5.327v19.2c0 1.68-.269 3.207-.805 4.584-.537 1.376-1.301 2.56-2.292 3.55a10.231 10.231 0 01-3.53 2.292c-1.363.537-2.87.805-4.522.805-1.624 0-3.083-.254-4.376-.764a10.468 10.468 0 01-3.386-2.126 10.035 10.035 0 01-2.271-3.18L67.097 32a5.452 5.452 0 001.92 1.879c.784.454 1.672.681 2.663.681 1.074 0 2.003-.24 2.787-.723.785-.481 1.397-1.156 1.838-2.023.44-.867.66-1.879.66-3.035v-1.775a7.793 7.793 0 01-2.828 2.333c-1.143.564-2.402.846-3.778.846zm1.404-5.12c1.018 0 1.92-.254 2.704-.764a5.556 5.556 0 001.879-2.064c.468-.867.702-1.851.702-2.952 0-1.102-.234-2.086-.702-2.953a5.556 5.556 0 00-1.879-2.064c-.784-.51-1.686-.764-2.704-.764-1.019 0-1.92.255-2.705.764a5.556 5.556 0 00-1.879 2.064c-.468.867-.702 1.851-.702 2.953 0 1.1.234 2.085.702 2.952a5.556 5.556 0 001.88 2.064c.784.51 1.685.764 2.704.764zm15.607 5.74V9h5.327l.206 3.304c.55-1.157 1.294-2.044 2.23-2.664.936-.62 2.037-.929 3.303-.929.386 0 .77.035 1.156.103.386.07.73.159 1.033.269l-.62 5.698a4.361 4.361 0 00-.929-.227 7.495 7.495 0 00-.97-.062c-1.597 0-2.822.489-3.675 1.466-.853.977-1.28 2.36-1.28 4.15v10.694h-5.78z"
+              fill="#FFF" fill-rule="nonzero" />
+          </svg>
+        </a>
+        <div class="menu-button cursor-pointer xs:block md:hidden">
+          <svg width="32" height="18" xmlns="http://www.w3.org/2000/svg">
+            <g fill="#FFF" fill-rule="evenodd">
+              <path d="M0 0h32v2H0zM0 8h32v2H0zM0 16h32v2H0z" />
+            </g>
+          </svg>
+        </div>
+        <div
+          class="menu xs:z-30 xs:p-5 xs:font-semibold md:flex grow md:bg-[transparent] xs:bg-white md:text-white xs:text-very-dark-blu md:flex-row xs:flex-col md:relative xs:fixed md:top-0 xs:top-[80px] md:left-0 xs:left-[20px] xs:right-[20px] xs:hidden md:items-center">
+          <nav
+            class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:text-start xs:text-center md:border-l md:border-gray-400 md:flex md:flex-row xs:flex-col flex-wrap items-center text-base justify-center">
+            <div class="xs:flex xs:flex-col ">
+              <a class="xs:py-3 xs:flex xs:mx-auto md:mr-5 flex items-center dropdown" href="#">
+                <span class="md:mt-0 mr-1">Product</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7">
+                  <path class="xs:stroke-[var(--light-red)] md:stroke-[#fff]" fill="none" stroke="#FFF" stroke-width="2"
+                    opacity=".75" d="M1 1l4 4 4-4" />
+                </svg>
+              </a>
+              <ul class="dropdown-list xs:w-full rounded-xl">
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Marketplace</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Integrations</a></li>
+              </ul>
+            </div>
+            <div class="xs:flex xs:flex-col">
+              <a class="xs:py-3 xs:flex xs:mx-auto md:mr-5 flex items-center dropdown" href="#">
+                <span class="md:mt-0 mr-1">Company</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7">
+                  <path class="xs:stroke-[var(--light-red)] md:stroke-[#fff]" fill="none" stroke="#FFF" stroke-width="2"
+                    opacity=".75" d="M1 1l4 4 4-4" />
+                </svg>
+              </a>
+              <ul class="dropdown-list xs:w-full rounded-xl">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Careers</a></li>
+              </ul>
+            </div>
+            <div class="xs:flex xs:flex-col">
+              <a class="xs:py-3 xs:flex xs:mx-auto md:mr-5 flex items-center dropdown" href="#">
+                <span class="md:mt-0 mr-1">Connect</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7">
+                  <path class="xs:stroke-[var(--light-red)] md:stroke-[#fff]" fill="none" stroke="#FFF" stroke-width="2"
+                    opacity=".75" d="M1 1l4 4 4-4" />
+                </svg>
+              </a>
+              <ul class="dropdown-list xs:w-full rounded-xl">
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Newsletter</a></li>
+                <li><a href="#">LinkedIn</a></li>
+              </ul>
+            </div>
+          </nav>
+          <hr class="xs:block md:hidden w-full border-gray my-4">
+          <button
+            class="md:inline-flex xs:block xs:mx-auto md:mx-3 items-center md:text-white xs:text-very-dark-blue  border-0 py-1 px-3 focus:outline-none rounded text-base mt-4 md:mt-0">
+            Login
+          </button>
+          <button
+            class="md:inline-flex xs:block xs:mx-auto md:mx-3 md:text-light-red xs:text-white hover:text-white items-center md:bg-white mobile-btn-gradient hover:bg-white/20 border-0 py-2 px-5 focus:outline-none rounded-full text-base mt-4 md:mt-0">
+            Sign up
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="z-10 text-white relative red-gradient bg-left bg-auto py-48 rounded-bl-[5rem] overflow-hidden">
+      <div class="z-20 relative flex flex-col items-center">
+        <h1 class="lg:text-6xl md:text-5xl xs:text-3xl mb-4">
+          A modern publishing platform
+        </h1>
+        <p class="mb-10">
+          Grow your audience and build your online brand
+        </p>
+        <div class="flex">
+          <button
+            class="inline-flex text-light-red bg-white border-0 py-1 px-4 focus:outline-none hover:bg-white/30 hover:text-white rounded-full text-lg">
+            Start for Free
+          </button>
+          <button
+            class="inline-flex text-white bg-transparent border py-1 px-4 focus:outline-none hover:bg-white hover:text-light-red rounded-full text-lg ml-3">
+            Learn More
+          </button>
+        </div>
+      </div>
+      <div class="bg absolute md:top-[-900px] xs:top-[-520px] bottom-0 md:left-[-300px] xs:left-[-300px] right-0 z-10">
+        <img class="xs:hidden md:block w-[2500px] max-w-none" src="./images/bg-pattern-intro-desktop.svg" alt="">
+        <img class="md:hidden xs:block w-[1500px] max-w-none" src="./images/bg-pattern-intro-mobile.svg" alt="">
+      </div>
+    </section>
+
+    <section class="my-20 overflow-hidden lg:pl-10">
+      <h2 class="text-center text-3xl font-semibold lg:mb-16">
+        Designed for the future
+      </h2>
+      <div class="flex p-14 md:flex-row xs:flex-col">
+        <div
+          class="md:w-3/5 md:flex md:justify-center md:flex-col p-10 xs:order-3 md:order-2 xs:text-center md:text-start">
+          <h3 class="text-xl text-very-dark-blue my-4 font-semibold">Introducing an extensible editor</h3>
+          <p class="text-very-dark-grayish-blue">
+            Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
+            The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
+            videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
+            change the looks of a blog.
+          </p>
+          <h3 class="text-xl text-very-dark-blue my-4 mt-16 font-semibold">Robust content management</h3>
+          <p class="text-very-dark-grayish-blue">
+            Flexible content management enables users to easily move through posts. Increase the usability of your blog
+            by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+          </p>
+        </div>
+        <div class="md:w-2/5 xs:order-2 md:order-3">
+          <img class="md:block xs:hidden translate-x-10 w-[140%] max-w-none md:max-w-[700px]"
+            src="./images/illustration-editor-desktop.svg" alt="editor">
+          <img class="xs:block md:hidden max-w-none" src="./images/illustration-editor-mobile.svg" alt="editor">
+        </div>
+      </div>
+    </section>
+
+    <section class="cutom-gradient text-white md:my-20 xs:mt-40 md:px-14 relative rounded-tr-[5rem] rounded-bl-[5rem]">
+      <div class="flex md:flex-row xs:flex-col xs:px-[3rem] xs:text-center md:text-start">
+        <div class="w-full h-full overflow-hidden z-10 absolute left-0 right-0 xs: ">
+          <img class="xs:hidden md:block absolute -top-96 -left-44 w-[800px] h-[800px] max-w-none"
+            src="./images/bg-pattern-circles.svg" alt="pattern-circles">
+          <img class="xs:block md:hidden absolute -top-[300px] left-[10%] min-w-[300px] w-full h-auto max-w-none"
+            src="./images/bg-pattern-circles.svg" alt="pattern-circles">
+        </div>
+        <div class="md:w-[35%] relative z-20">
+          <img
+            class="block absolute md:w-[120%] xs:w-[300px] md:left-0 xs:left-1/2 xs:-ml-[150px] md:ml-0 md:max-w-[490px] md:-translate-y-14 xs:-translate-y-40"
+            src="./images/illustration-phones.svg" alt="phones">
+        </div>
+        <div class="md:p-28 md:w-[65%] z-20 xs:pt-40 xs:pb-20">
+          <h3 class="text-3xl mb-3">
+            State of the Art Infrastructure
+          </h3>
+          <p class="text-sm text-grayish-blue">
+            With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
+            This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="text-base md:my-28 xs:mb-20">
+      <div class="md:flex">
+        <div class="grow overflow-hidden md:w-1/2">
+          <img class="md:block xs:hidden translate-x-[-26%] w-[140%] max-w-none"
+            src="./images/illustration-laptop-desktop.svg" alt="laptop">
+          <img class="xs:block md:hidden w-full max-w-none" src="./images/illustration-laptop-mobile.svg" alt="laptop">
+        </div>
+        <div
+          class="md:w-1/2  font-medium md:flex md:flex-col justify-center md:px-14 xs:px-10 xs:text-center md:text-start">
+          <h3 class="text-xl text-very-dark-blue my-4">Free, open, simple</h3>
+          <p class="text-very-dark-grayish-blue">
+            Blogr is a free and open source application backed by a large community of helpful developers. It supports
+            features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting
+            tools,
+            and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+          </p>
+          <h3 class="text-xl text-very-dark-blue my-4 mt-16">Powerful tooling</h3>
+          <p class="text-very-dark-grayish-blue">
+            Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a
+            breeze,
+            but
+            capable of producing even the most complicated sites.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-white body-font bg-very-dark-black-blue rounded-tr-[5rem]">
+      <div class="container max-w-5xl px-5 py-24 xs:pb-0 mx-auto flex md:flex-row md:flex-nowrap flex-wrap flex-col">
+        <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left xs:mb-16 md:mb-0">
+          <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+            <svg width="101" height="40" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M0 30.803V1.486h10.653c1.982 0 3.695.31 5.14.93 1.446.619 2.56 1.5 3.345 2.642.785 1.142 1.177 2.484 1.177 4.026 0 1.404-.303 2.636-.909 3.695a6.48 6.48 0 01-2.56 2.498c1.487.578 2.643 1.494 3.469 2.746.826 1.253 1.239 2.732 1.239 4.439 0 1.707-.44 3.18-1.322 4.418-.88 1.239-2.12 2.202-3.716 2.89-1.596.688-3.482 1.033-5.657 1.033H0zM5.946 6.565v6.73h4.046c1.35 0 2.388-.282 3.118-.846.73-.564 1.094-1.397 1.094-2.498 0-1.101-.365-1.94-1.094-2.519-.73-.578-1.769-.867-3.118-.867H5.946zm0 19.159h4.624c1.542 0 2.732-.33 3.572-.991.84-.66 1.26-1.61 1.26-2.85 0-1.238-.42-2.188-1.26-2.848-.84-.66-2.03-.991-3.572-.991H5.946v7.68zm19.282 5.079V0h5.781v30.803h-5.78zm20.893.619c-1.624 0-3.124-.29-4.5-.867a10.94 10.94 0 01-3.593-2.416 10.96 10.96 0 01-2.374-3.654c-.564-1.404-.846-2.931-.846-4.583 0-1.652.289-3.173.867-4.563a11.354 11.354 0 012.415-3.654 10.96 10.96 0 013.634-2.436c1.39-.578 2.91-.867 4.562-.867 1.625 0 3.125.289 4.501.867a10.94 10.94 0 013.592 2.416 11.01 11.01 0 012.375 3.633c.564 1.39.846 2.911.846 4.563 0 1.651-.289 3.179-.867 4.583a11.297 11.297 0 01-2.416 3.675 10.96 10.96 0 01-3.633 2.436c-1.39.578-2.911.867-4.563.867zm.083-5.203c1.046 0 1.982-.275 2.808-.825.825-.551 1.48-1.301 1.96-2.25.483-.95.723-2.03.723-3.242 0-1.211-.24-2.292-.722-3.241-.482-.95-1.136-1.7-1.961-2.25-.826-.551-1.762-.826-2.808-.826-1.046 0-1.982.275-2.808.825-.826.55-1.48 1.301-1.961 2.25-.482.95-.723 2.03-.723 3.242 0 1.211.241 2.292.723 3.241.482.95 1.135 1.7 1.961 2.25.826.551 1.762.826 2.808.826zm24.155 3.964a9.13 9.13 0 01-3.86-.826 9.492 9.492 0 01-3.118-2.291c-.881-.977-1.57-2.12-2.065-3.427-.495-1.308-.743-2.719-.743-4.233 0-1.569.255-3.02.764-4.356a10.614 10.614 0 012.147-3.489 10.174 10.174 0 013.22-2.333c1.225-.564 2.554-.846 3.985-.846 1.404 0 2.67.282 3.799.846a7.402 7.402 0 012.807 2.457l.124-2.684h5.327v19.2c0 1.68-.269 3.207-.805 4.584-.537 1.376-1.301 2.56-2.292 3.55a10.231 10.231 0 01-3.53 2.292c-1.363.537-2.87.805-4.522.805-1.624 0-3.083-.254-4.376-.764a10.468 10.468 0 01-3.386-2.126 10.035 10.035 0 01-2.271-3.18L67.097 32a5.452 5.452 0 001.92 1.879c.784.454 1.672.681 2.663.681 1.074 0 2.003-.24 2.787-.723.785-.481 1.397-1.156 1.838-2.023.44-.867.66-1.879.66-3.035v-1.775a7.793 7.793 0 01-2.828 2.333c-1.143.564-2.402.846-3.778.846zm1.404-5.12c1.018 0 1.92-.254 2.704-.764a5.556 5.556 0 001.879-2.064c.468-.867.702-1.851.702-2.952 0-1.102-.234-2.086-.702-2.953a5.556 5.556 0 00-1.879-2.064c-.784-.51-1.686-.764-2.704-.764-1.019 0-1.92.255-2.705.764a5.556 5.556 0 00-1.879 2.064c-.468.867-.702 1.851-.702 2.953 0 1.1.234 2.085.702 2.952a5.556 5.556 0 001.88 2.064c.784.51 1.685.764 2.704.764zm15.607 5.74V9h5.327l.206 3.304c.55-1.157 1.294-2.044 2.23-2.664.936-.62 2.037-.929 3.303-.929.386 0 .77.035 1.156.103.386.07.73.159 1.033.269l-.62 5.698a4.361 4.361 0 00-.929-.227 7.495 7.495 0 00-.97-.062c-1.597 0-2.822.489-3.675 1.466-.853.977-1.28 2.36-1.28 4.15v10.694h-5.78z"
+                fill="#FFF" fill-rule="nonzero" />
+            </svg>
+          </a>
+        </div>
+        <div class="md:w-1/2 w-full px-4 xs:text-center md:text-start">
+          <h2 class="title-font font-medium text-base text-gray-900 tracking-widest mb-5">Product</h2>
+          <nav class="list-none mb-10 text-grayish-blue">
+            <ul>
+              <li class="mb-1.5">
+                <a class="text-gray-600" href="#">Overview</a>
+              </li>
+              <li class="mb-1.5">
+                <a class="text-gray-600" href="#">Pricing</a>
+              </li>
+              <li class="mb-1.5">
+                <a class="text-gray-600" href="#">Marketplace</a>
+              </li>
+              <li class="mb-1.5">
+                <a class="text-gray-600" href="#">Features</a>
+              </li>
+              <li class="mb-1.5">
+                <a class="text-gray-600" href="#">Integrations</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="md:w-1/2 w-full px-4 xs:text-center md:text-start">
+          <h2 class="title-font font-medium text-base text-gray-900 tracking-widest mb-5">Company</h2>
+          <nav class="list-none mb-10 text-grayish-blue">
+            <ul>
+              <li class="mb-1.5">
+                <a class="text-gray-600" href="#">About</a>
+              </li>
+              <li class="mb-1.5">
+                <a class="text-gray-600" href="#">Team</a>
+              </li>
+              <li class="mb-1.5">
+                <a class="text-gray-600" href="#">Blog</a>
+              </li>
+              <li class="mb-1.5">
+                <a class="text-gray-600" href="#">Careers</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="md:w-1/2 w-full px-4 xs:text-center md:text-start">
+          <h2 class="title-font font-medium text-base text-gray-900 tracking-widest mb-5">Connect</h2>
+          <nav class="list-none mb-10 text-grayish-blue">
+            <ul>
+              <li class="mb-1.5">
+                <a class="text-gray-600" href="#">Contact</a>
+              </li>
+              <li class="mb-1.5">
+                <a class="text-gray-600" href="#">Newsletter</a>
+              </li>
+              <li class="mb-1.5">
+                <a class="text-gray-600" href="#">LinkedIn</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  </main>
+  <script>
+    minifun.menu("menu-button", "menu");
+    minifun.dropDown("dropdown", "dropdown-list", { autoClose: true });
+  </script>
+  <script>
+  </script>
+</body>
+
+</html>
