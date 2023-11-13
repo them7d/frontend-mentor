@@ -1,0 +1,176 @@
+:root {
+  --moderate-cyan: #3db5ad;
+  --dark-cyan: #147b74;
+  --black: #000000;
+  --gray: #d3d3d3;
+  --dark-gray: #7a7a7a;
+  --medium-gray: #f4f4f4;
+  --light-gray: #fafafa;
+  --white: #fff;
+}
+
+.hero-img-container {
+  position: relative;
+}
+
+.hero-img-container:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(17, 17, 17, 0.6995907738095238) 100%
+  );
+}
+
+.section-1 {
+  box-shadow: 0 3px 8px -4px #e7e7e7;
+}
+
+.section-2,
+.section-3 {
+  box-shadow: 0 0 10px -4px #e7e7e7;
+}
+
+.progress {
+  background: var(--moderate-cyan);
+  color: #fff;
+  padding: 7px;
+  width: 60%;
+  border-radius: 9999px;
+}
+
+.progress-bar span {
+  display: block;
+}
+
+.progress-bar {
+  max-width: 100%;
+  background: #f4f4f4;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.bookmark.bookmarked {
+  background: #3db5ad20;
+  color: var(--dark-cyan);
+  font-weight: 700;
+}
+
+.bookmark path {
+  fill: #b1b1b1;
+}
+
+.bookmark circle {
+  fill: #2f2f2f;
+}
+
+.bookmark.bookmarked circle {
+  fill: var(--dark-cyan);
+}
+
+.bookmark.bookmarked path {
+  fill: var(--white);
+}
+
+.card:has(input[type='radio']:checked) {
+  border: 1px solid var(--moderate-cyan);
+}
+
+.pledge.flex {
+  display: none;
+}
+
+.card .flex:has(input[type='radio']:checked) ~ .pledge {
+  display: flex;
+}
+
+.card .flex input[type='radio']:checked ~ label p {
+  margin-bottom: 33px;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 0;
+}
+
+.card:hover h3 {
+  color: var(--moderate-cyan);
+}
+
+.card:hover input[type='radio'] {
+  border-color: var(--moderate-cyan);
+}
+
+@media (width<768px) {
+  .card .flex:has(input[type='radio']:checked) ~ .pledge {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card .flex:has(input[type='radio']:checked) ~ .pledge > label {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .card .flex:has(input[type='radio']:checked) ~ .pledge > * {
+    margin: 10px 0;
+  }
+
+  .card
+    .flex:has(input[type='radio']:checked)
+    ~ .pledge
+    > :is(.inp__container, button) {
+    width: calc(50% - 10px);
+  }
+
+  .card .flex:has(input[type='radio']:checked) ~ .pledge .inp__container {
+    position: relative;
+    margin: 0 auto 0 0;
+  }
+
+  .card
+    .flex:has(input[type='radio']:checked)
+    ~ .pledge
+    .inp__container:before {
+    color: rgb(150, 150, 150);
+    font-weight: 800;
+    content: '$';
+    position: absolute;
+    top: 8px;
+    left: 10px;
+  }
+
+  .inp__container input {
+    max-width: 100%;
+    text-indent: 12px;
+  }
+
+  nav.menu {
+    background: white;
+    color: var(--black);
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    right: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+
+  nav.menu a {
+    padding: 15px 20px;
+    width: 100%;
+  }
+
+  nav.menu a:not(:last-child) {
+    border-bottom: 1px solid var(--gray);
+  }
+}
