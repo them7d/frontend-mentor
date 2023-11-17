@@ -8,6 +8,7 @@ function update_data() {
       var yearly_check = document.querySelector('.yearly').checked;
       price_place.textContent = get_price(rang.value, yearly_check).toFixed(2);
       count_view.textContent = get_countview(rang.value - 1, yearly_check);
+      rang.style.background = `linear-gradient(to right, #a5f3eb 0%, #a5f3eb ${((rang.value - 1) / 4) * 100}%, #eaeefb ${((rang.value - 1) / 4) * 100}%, #eaeefb 100%)`;
 }
 function get_price(value, yearly) {
       if (value === '1') {

@@ -35,3 +35,4 @@ this repo contain all frontend mentor challenge
 | Stats-preview-card-component  | [link](./Stats-preview-card-component)  | [link](https://them7d.github.io/frontend-mentor/Stats-preview-card-component)  |
 | time-tracking-dashboard       | [link](./time-tracking-dashboard)       | [link](https://them7d.github.io/frontend-mentor/time-tracking-dashboard)       |
 | tip-calculator-app            | [link](./tip-calculator-app)            | [link](https://them7d.github.io/frontend-mentor/tip-calculator-app)            |
+| interactive-pricing-component | [link](./interactive-pricing-component) | [link](https://them7d.github.io/frontend-mentor/interactive-pricing-component) |
