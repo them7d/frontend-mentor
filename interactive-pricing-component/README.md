@@ -1,6 +1,6 @@
-# Frontend Mentor - Tip calculator app solution
+# Frontend Mentor - Interactive pricing component solution
 
-This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Interactive pricing component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -10,6 +10,7 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
 - [Author](#author)
 
 ## Overview
@@ -20,7 +21,7 @@ Users should be able to:
 
 - View the optimal layout for the app depending on their device's screen size
 - See hover states for all interactive elements on the page
-- Calculate the correct tip and total cost of the bill per person
+- Use the slider and toggle to see prices for different page view numbers
 
 ### Screenshot
 
@@ -28,8 +29,10 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [repo](https://github.com/them7d/frontend-mentor/frontend-mentor/tip-calculator-app)
-- Live Site URL: [Live](https://them7d.github.io/frontend-mentor/frontend-mentor/tip-calculator-app)
+### Links
+
+- Solution URL: [github](https://github.com/them7d/frontend-mentor/interactive-pricing-component)
+- Live Site URL: [live preview](https://them7d.github.io/frontend-mentor/interactive-pricing-component)
 
 ## My process
 
@@ -38,7 +41,10 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- Tailwind
+
+### What I learned
+
+how removeEventListener works
 
 ## Author
 

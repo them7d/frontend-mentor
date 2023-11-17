@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [repo](https://github.com/them7d/frontend-mentor/blogr-landing-page)
-- Live Site URL: [Live](https://them7d.github.io/frontend-mentor/blogr-landing-page)
+- Solution URL: [repo](https://github.com/them7d/frontend-mentor/frontend-mentor/blogr-landing-page)
+- Live Site URL: [Live](https://them7d.github.io/frontend-mentor/frontend-mentor/blogr-landing-page)
 
 ## My process
 

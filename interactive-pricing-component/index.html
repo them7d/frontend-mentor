@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive pricing component</title>
+  <script src='https://cdn.tailwindcss.com'></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          'Manrope': ['Manrope', 'sans-serif'],
+        },
+        screens: {
+          'xs': '375px',
+          'md': '768px',
+        },
+        colors: {
+          'soft-cyan': '#a6f2eb',
+          'strong-cyan': '#0fd6c2',
+          'light-grayish-red': '#feece7',
+          'light-red': '#ff8c66',
+          'pale-blue': '#bdccff',
+          'white': '#ffffff',
+          'very-pale-blue': '#fafbff',
+          'light-grayish-blue-slider': '#ebeefa',
+          'light-grayish-blue-toggle': '#ccd6ed',
+          'grayish-blue': '#858fad',
+          'dark-desaturated-blue': '#293357',
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-very-pale-blue">
+  <main class="main font-Manrope flex min-h-screen">
+    <div
+      class="absolute top-0 left-0 right-0 md:height-[450px] bg-[url('./images/bg-pattern.svg')] bg-cover z-[1] py-[225px]">
+    </div>
+    <div class="cn flex items-center flex-col w-full text-sm">
+      <div class="head-page my-[5.5rem] relative text-center">
+        <div class="absolute -top-8 left-[50%] -ml-[73px] z-[2]">
+          <svg xmlns="http://www.w3.org/2000/svg" width="146" height="145">
+            <g fill="none" fill-rule="evenodd" stroke="#CFD8EF">
+              <circle cx="63" cy="82" r="62.5" />
+              <circle cx="105" cy="41" r="40.5" />
+            </g>
+          </svg>
+        </div>
+        <h1 class="text-dark-desaturated-blue font-bold text-3xl my-3 z-[3] relative">Simple, traffic-based pricing</h1>
+        <p class="text-grayish-blue z-[3] relative">
+          Sign-up for our 30-day trial. No credit card required.
+        </p>
+      </div>
+      <div
+        class="cn max-w-[540px] md:w-full xs:w-[90%] bg-white shadow-lg shadow-light-grayish-blue-toggle rounded-md z-[3] md:mx-0 xs:mx-10">
+        <div class="top_card_sec md:px-12 md:py-16 md:pb-10 xs:px-8 xs:py-10">
+          <div class="flex md:flex-row xs:flex-col-reverse justify-between md:items-start xs:items-center">
+            <div class="page_view text-grayish-blue flex items-center">
+              <span class="count_view mr-1">100k</span> Pageviews
+            </div>
+            <div class="price_per_month flex items-center md:mb-0 xs:mb-5">
+              <div class="cn_price flex text-4xl font-bold text-dark-desaturated-blue">
+                $ <div class="price">16.00</div>
+              </div>
+              <span class="text-grayish-blue year-month ml-2">/month</span>
+            </div>
+          </div>
+          <div class="slidecontainer flex w-full my-10">
+            <input class="w-full block rang_inp" type="range" min="1" max="5" value="3">
+          </div>
+          <div class="flex justify-center billing -mr-12 text-grayish-blue">
+            <span class="flex items-center md:text-sm xs:text-xs">Monthly Billing</span>
+            <label class="switch mx-5">
+              <input type="checkbox" class="yearly">
+              <span class="slider"></span>
+            </label>
+            <span class="flex items-center md:text-sm xs:text-xs">Yearly Billing</span>
+            <span
+              class="flex items-center text-light-red bg-light-grayish-red rounded-full px-2 py-0.5 ml-2 text-[10px] font-bold">
+              <span class="xs:block md:hidden">-</span>25% <span class="md:block xs:hidden">discount</span>
+            </span>
+          </div>
+        </div>
+        <div
+          class="flex md:flex-row xs:flex-col-reverse items-center justify-between border-t border-light-grayish-blue-slider md:px-12 xs:px-8 md:py-9 xs:py-10 md:pt-8 text-sm text-grayish-blue">
+          <ul class="list-features">
+            <li>Unlimited websites</li>
+            <li>100% data ownership</li>
+            <li>Email reports</li>
+          </ul>
+          <a href="#"
+            class="inline-flex text-pale-blue bg-dark-desaturated-blue border-0 py-3 px-12 focus:outline-none hover:bg-dark-desaturated-blue/80 rounded-full">
+            Start my trial
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="./script.js"></script>
+</body>
+
+</html>

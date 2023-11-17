@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [repo](https://github.com/them7d/frontend-mentor/crowdfunding-product-page)
-- Live Site URL: [Live](https://them7d.github.io/frontend-mentor/crowdfunding-product-page)
+- Solution URL: [repo](https://github.com/them7d/frontend-mentor/frontend-mentor/crowdfunding-product-page)
+- Live Site URL: [Live](https://them7d.github.io/frontend-mentor/frontend-mentor/crowdfunding-product-page)
 
 ## My process
 

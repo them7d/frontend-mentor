@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [github](https://github.com/them7d/intro-section)
-- Live Site URL: [Add live site URL here](https://them7d.github.io/intro-section)
+- Solution URL: [github](https://github.com/them7d/frontend-mentor/intro-section)
+- Live Site URL: [Add live site URL here](https://them7d.github.io/frontend-mentor/intro-section)
 
 ## My process
 

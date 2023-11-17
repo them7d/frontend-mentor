@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/them7d/interactive-card-details-form)
-- Live Site URL: [Add live site URL here](https://them7d.github.io/interactive-card-details-form)
+- Solution URL: [github](https://github.com/them7d/frontend-mentor/interactive-card-details-form)
+- Live Site URL: [live preview](https://them7d.github.io/frontend-mentor/interactive-card-details-form)
 
 ## My process
 

@@ -23,8 +23,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [repo](https://github.com/them7d/frontend-mentor/sunnyside-agency-landing-page)
-- Live Site URL: [Live](https://them7d.github.io/frontend-mentor/sunnyside-agency-landing-page)
+- Solution URL: [repo](https://github.com/them7d/frontend-mentor/frontend-mentor/sunnyside-agency-landing-page)
+- Live Site URL: [Live](https://them7d.github.io/frontend-mentor/frontend-mentor/sunnyside-agency-landing-page)
 
 ## My process
 

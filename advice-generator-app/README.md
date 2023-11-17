@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [github](https://github.com/them7d/advice-generator-app)
-- Live Site URL: [live page](https://them7d.github.io/advice-generator-app)
+- Solution URL: [github](https://github.com/them7d/frontend-mentor/frontend-mentor/advice-generator-app)
+- Live Site URL: [live page](https://them7d.github.io/frontend-mentor/advice-generator-app)
 
 ### Built with
 

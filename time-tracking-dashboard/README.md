@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Repository](https://github.com/them7d/time-tracking-dashboard)
-- Live Site URL: [Github Pages](https://them7d.github.io/time-tracking-dashboard/)
+- Solution URL: [Repository](https://github.com/them7d/frontend-mentor/time-tracking-dashboard)
+- Live Site URL: [Github Pages](https://them7d.github.io/frontend-mentor/time-tracking-dashboard/)
 
 ## My process
 
