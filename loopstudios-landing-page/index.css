@@ -1,0 +1,20 @@
+.childs-w-full>div {
+      width: 100%;
+}
+
+.childs-w-full>div:after {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(17, 17, 17, 0.6995907738095238) 100%);
+}
+
+.childs-w-full img {
+      width: 100%;
+}
+
+.childs-span-max-w-full span {
+      max-width: 100%;
+      z-index: 2;
+}
+
+.social-links a {
+      margin: 0 10px;
+}
