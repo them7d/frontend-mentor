@@ -8,6 +8,7 @@ this repo contain all frontend mentor challenge
 | sunnyside-agency-landing-page | [link](./sunnyside-agency-landing-page) | [link](https://them7d.github.io/frontend-mentor/sunnyside-agency-landing-page) |
 | blogr-landing-page            | [link](./blogr-landing-page)            | [link](https://them7d.github.io/frontend-mentor/blogr-landing-page)            |
 | four-card-feature             | [link](./four-card-feature)             | [link](https://them7d.github.io/frontend-mentor/four-card-feature)             |
+| testimonials-grid-section     | [link](./testimonials-grid-section)     | [link](https://them7d.github.io/frontend-mentor/testimonials-grid-section)     |
 | 3-column-preview-card         | [link](./3-column-preview-card)         | [link](https://them7d.github.io/frontend-mentor/3-column-preview-card)         |
 | advice-generator-app          | [link](./advice-generator-app/)         | [link](https://them7d.github.io/frontend-mentor/advice-generator-app/)         |
 | age-calculator                | [link](./age-calculator/)               | [link](https://them7d.github.io/frontend-mentor/age-calculator/)               |
