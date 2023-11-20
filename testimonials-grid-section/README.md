@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://them7d.github.io/frontend-mentor/testimonials-grid-section)
-- Live Site URL: [github](https://github.com/them7d/frontend-mentor/testimonials-grid-section)
+- Live Site URL: [live](https://them7d.github.io/frontend-mentor/testimonials-grid-section)
+- Solution URL: [github](https://github.com/them7d/frontend-mentor/testimonials-grid-section)
 
 ## My process
 
