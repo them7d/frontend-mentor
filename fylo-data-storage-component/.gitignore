@@ -1,0 +1,8 @@
+*.sketch
+*.xd
+*.fig
+.DS_Store
+design/desktop-design.jpg
+design/desktop-preview.jpg
+design/mobile-design.jpg
+tailwind.config.js
