@@ -12,6 +12,7 @@ this repo contain all frontend mentor challenge
 | 3-column-preview-card         | [link](./3-column-preview-card)         | [link](https://them7d.github.io/frontend-mentor/3-column-preview-card)         |
 | advice-generator-app          | [link](./advice-generator-app/)         | [link](https://them7d.github.io/frontend-mentor/advice-generator-app/)         |
 | age-calculator                | [link](./age-calculator/)               | [link](https://them7d.github.io/frontend-mentor/age-calculator/)               |
+| fylo-data-storage-component   | [link](./fylo-data-storage-component)   | [link](https://them7d.github.io/frontend-mentor/fylo-data-storage-component)   |
 | apparel-coming-soon           | [link](./apparel-coming-soon)           | [link](https://them7d.github.io/frontend-mentor/apparel-coming-soon)           |
 | article-preview               | [link](./article-preview)               | [link](https://them7d.github.io/frontend-mentor/article-preview)               |
 | expenses-chart-component      | [link](./expenses-chart-component)      | [link](https://them7d.github.io/frontend-mentor/expenses-chart-component)      |
