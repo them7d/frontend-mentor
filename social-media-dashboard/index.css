@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*,
+*:before,
+*:after {
+      box-sizing: border-box;
+}
+
+body {
+      color: hsl(230, 17%, 14%);
+      font-family: "Inter", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+}
+
+body.dark-mode {
+      background: hsl(230, 17%, 14%);
+      color: white;
+}
+
+.dark-mode {
+      color: var(--text-gray-dark-mode);
+}
+
+.data_info {
+      letter-spacing: 6px;
+      text-align: center;
+}
+
+.dark-mode .text-gray {
+      color: var(--text-gray-dark-mode);
+}
+
+.text-gray {
+      color: var(--text-gray-light-mode);
+}
+
+.dark-mode .top-card {
+      background: var(--card-bg);
+}
+
+.top-card {
+      background: var(--card-bg-light-mode);
+}
+
+main {
+      max-width: 1400px;
+      margin: 0 auto;
+      font-weight: 400;
+      padding: 0 50px;
+}
+
+.text-lime-green {
+      color: var(--green-lime);
+}
+
+.toggle {
+      cursor: pointer;
+      display: inline-block;
+}
+
+.toggle-switch {
+      display: inline-block;
+      background: #ccc;
+      border-radius: 16px;
+      width: 50px;
+      height: 24px;
+      position: relative;
+      vertical-align: middle;
+      transition: background 0.25s;
+}
+
+.toggle-switch:before,
+.toggle-switch:after {
+      content: "";
+}
+
+.toggle-switch:before {
+      background: var(--white);
+      display: block;
+      border-radius: 50%;
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      transition: left 0.25s;
+}
+
+.dark-mode .toggle-switch:before {
+      background: var(--dark-color-background);
+}
+
+.toggle:hover .toggle-switch:before {
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+.toggle-checkbox:checked+.toggle-switch {
+      background: var(--toggle-btn-gradient);
+}
+
+.toggle-checkbox:checked+.toggle-switch:before {
+      right: 30px;
+}
+
+.toggle-checkbox {
+      position: absolute;
+      visibility: hidden;
+}
+
+.toggle-label {
+      margin-right: 5px;
+      position: relative;
+      top: 2px;
+}
+
+.border-t-insta {
+      border-image: var(--gradient-insta) 1;
+      overflow: hidden;
+}
+
+.secondary-card {
+      background: var(--card-bg-light-mode);
+      margin-bottom: 30px;
+      padding: 25px;
+}
+
+.dark-mode .secondary-card {
+      background: var(--card-bg);
+}
+
+.dark-mode .top-card:hover,
+.dark-mode .secondary-card:hover {
+      filter: brightness(1.5);
+}
+
+.top-card:hover,
+.secondary-card:hover {
+      filter: brightness(.9);
+}
+
+.top-card,
+.secondary-card {
+      cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+      .main-grid>.box:not(:last-child) {
+            margin: 0 35px 0 0;
+      }
+
+      .secondary-card:not(:nth-child(4n)) {
+            margin-right: 35px;
+      }
+}
+
+@media screen and (max-width:768px) {
+      .main-grid>.box {
+            margin: 0 0 26px 0;
+      }
+
+      body {
+            padding: 30px;
+      }
+}
+
+:root {
+      --white: #fff;
+      --dark-color-background: hsl(230, 17%, 14%);
+      --green-lime: hsl(163, 72%, 41%);
+      --text-gray-dark-mode: hsl(228, 34%, 66%);
+      --facebook: hsl(208, 92%, 53%);
+      --bright-red: hsl(356, 69%, 56%);
+      --twitter: hsl(203, 89%, 53%);
+      --gradient-insta: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+      --card-bg: hsl(228, 28%, 20%);
+      --toggle-btn-gradient: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+
+      --card-bg-light-mode: hsl(227, 47%, 96%);
+      --text-gray-light-mode: hsl(228, 12%, 44%);
+}
