@@ -37,7 +37,7 @@
   <main class="main flex items-center justify-center min-h-screen">
     <div class="slider max-w-[1130px]">
       <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
+        <div class="swiper-wrapper md:overflow-visible xs:overflow-hidden">
 
           <!-- first slide -->
           <div class="slide animate__fadeInRight flex xs:flex-col-reverse md:flex-row xs:items-center md:items-[unset]">
@@ -92,7 +92,7 @@
                   </g>
                 </svg>
               </div>
-              <img class="w-[58vh] max-w-[unset] rounded" src="./images/image-tanya.jpg" alt="tanya">
+              <img class="md:w-[58vh] xs:w-[75vw] max-w-[unset] rounded" src="./images/image-tanya.jpg" alt="tanya">
               <div
                 class="btns_cn absolute xs:-bottom-6 md:-bottom-5 md:left-10 z-20 rounded-3xl bg-white shadow-md w-full max-w-[100px] flex justify-between">
                 <button class="cursor-pointer swiper-button-prev slider-btn">
@@ -167,7 +167,7 @@
                   </g>
                 </svg>
               </div>
-              <img class="w-[58vh] max-w-[unset] rounded" src="./images/image-john.jpg" alt="tanya">
+              <img class="md:w-[58vh] xs:w-[75vw] max-w-[unset] rounded" src="./images/image-john.jpg" alt="tanya">
               <div
                 class="btns_cn absolute xs:-bottom-6 md:-bottom-5 md:left-10 z-20 rounded-3xl bg-white shadow-md w-full max-w-[100px] flex justify-between">
                 <button class="cursor-pointer swiper-button-prev slider-btn">
@@ -191,7 +191,7 @@
       </div>
     </div>
     <div class="absolute bottom-0 left-0">
-      <svg xmlns="http://www.w3.org/2000/svg" width="610" height="154">
+      <svg xmlns="http://www.w3.org/2000/svg" width="610" height="154" class="xs:hidden md:block">
         <path fill="#F4F4FC" fill-rule="evenodd"
           d="M610 154C469.493 123.42 358.432 86.087 276.818 42S102.93-11.42 0 14v140h610z" />
       </svg>
